@@ -43,12 +43,13 @@ INSTALLED_APPS = [
     'apiviewset',
     'rest_framework',
     'rest_framework.authtoken',  # 토큰 인증을 위해 추가
-    #'tokenapi',
+    'tokenapi',
     'frontbackdev',
     'corsheaders',      # CORS 문제 해결
     'backenlion',
     'django_filters',    # 검색기능
     'filterSearch',
+    'pageREST',           # 페이지네이션
 ]
 
 
@@ -56,9 +57,9 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
     ],
-    #'DEFAULT_PERMISSION_CLASSES': [
-    #    'rest_framework.permissions.IsAuthenticated',  # 인증된 사용자만 접근 허용
-    #],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',  # 인증된 사용자만 접근 허용
+    ],
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']  # 검색기능
 }
 

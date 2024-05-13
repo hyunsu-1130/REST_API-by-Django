@@ -42,4 +42,5 @@ urlpatterns = [
     path('frontbackdev/', include('frontbackdev.urls')),    # front / back 분리하여 작동
     path('backenlion/', include('backenlion.urls')),    # front / back 분리하여 작동
     path('filter/', include('filterSearch.urls')),    # 검색
+    path('page/', include('pageREST.urls')),    # 검색
 ]
